@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section id="welcome" class="welcome base-content">
+        <div class="content-welcome">
+            <h4> Olá mundo! </h4>
+            <h2> José Pedro </h2>
+            <h3> Backend Developer </h3>
+            <p class="descricao"> 
+                Cearense arretado e com orgulho, desenvolvedor Backend Python (Django),
+                aspirante a FullStack, Pythonista e amante de Machine Learning.
+            </p>
+            <div class="welcome-buttons">
+                <form method="post" action="mailto:pedroosd28@gmail.com" >
+                    <button type="submit" class="btn btn-success">Mail-me</button>
+                    <a class="btn" href="#projects">Meu trabalho</a>
+                </form>
+                  
+            </div>
+        </div>
+        <div class="welcome-image">
+            <img src="{% static 'images/code.gif' %}" alt="">
+        </div>
+    </section>
+
+    <section id="projects" class="projects base-content">
+        <h2> PROJETOS </h2>
+        <p> Veja o que eu tenho feito ultimamente </p>
+        <div class="projects-container">
+            {% for projeto in projetos %}
+                <div class="project">
+                    <a class="img" href="{{ projeto.link }}">
+                        <img src="{{ projeto.get_image_url }}" alt="">
+                    </a>
+                    <div class="info">
+                        <a href="{{ projeto.link }}"> 
+                            <h4> 
+                                {{ projeto.title }} 
+                            </h4>
+                        </a> 
+                        <div class="tecs">
+                            {% for tec in projeto.tecnologies.all %}
+                                <span class="tec-info"> {{ tec.label }} </span>
+                            {% endfor %}
+                        </div>
+                        <p> {{ projeto.description }} </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2> HABILIDADES </h2>
+        <p> Veja um pouco das ferramentas que costumo usar </p>
+
+        <div class="skill-content">
+            {% for skill in skills %}
+                <div class="skill">
+                    <img src="{{ skill.icon.url }}" alt="">
+                    <h4> {{ skill.title }} </h4>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="about-me" class="about-me">
+        <div class="about-me-img">
+            <figure>
+                <img src="{% static 'images/me2.jpg' %}" alt="">
+            </figure>
+        </div>
+        <div class="about-me-info">
+            <figure class="img-mobile">
+                <img src="{% static 'images/me2.jpg' %}" alt="">
+            </figure>
+            <h2> José Pedro </h2>
+            <span> 💼 Backend Developer </span>
+            <span> 📍 Crato, Ceará, Brazil </span>
+            <div class="me-info">
+                <p>
+                    Estudante de TI no Instituto Federal do Ceará com conhecimentos em Python 
+                    voltados ao desenvolvimento de WebSites e WebAPIs com 
+                    Django, Flask e FastAPI. <br>
+                    Comunicativo, autodidata e com sede de aprender. Sigo a minha jornada
+                    a procura de me tornar FullStack, focando no Javascript com React e React Native
+                </p>
+                <br>
+                <strong>Atualmente: </strong>
+                <ul>
+                    <li> 💬 Masterizando Django, Flask e Fast API. </li>
+                    <li> 🌱 Aprendendo React e React Native. </li>
+                    <li> 🍵 As vezes brinco com Java e outras coisas. </li>
+                </ul>
+            </div>
+            <ul class="social-media">
+                <li><a href="https://github.com/oopaze/">
+                    <img src="{% static 'images/github.png' %}" alt="">
+                </a></li>
+                <li><a href="https://twitter.com/oopaze">
+                    <img src="{% static 'images/twitter.png' %}" alt="">
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/oopaze">
+                    <img src="{% static 'images/linkedin.png' %}" alt="">
+                </a></li>
+                <li>
+                    <form method="post" action="mailto:pedroosd28@gmail.com" >
+                        <button type="submit" href="">
+                            <img src="{% static 'images/gmail.png' %}" alt="">
+                        </button>
+                    </form>
+                </li>
+                <li><a href="{% url 'resume_download' %}">
+                    <img src="{% static 'images/cloud-computing.png' %}" alt="">
+                </a></li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
