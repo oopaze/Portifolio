@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,10 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%l(j!l-jy*2+)j4m$uz4nz4pxy_obx%k8k-69^m^j5q+8-*z+!'
+SECRET_KEY = config("SECRET_KEY", default="uma secret key secreta")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG", default=False, cast=bool)
+
 
 ALLOWED_HOSTS = ["*"]
 
@@ -45,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,11 +84,11 @@ WSGI_APPLICATION = 'src.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', default='portifolio'),
-        'USER': os.environ.get('DB_USER', default='postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWD', default='root'),
-        'HOST': os.environ.get('DB_HOST', default='localhost'),
-        'PORT': os.environ.get('DB_PORT', default='5432')
+        'NAME': config('DB_NAME', default='portifolio'),
+        'USER': config('DB_USER', default='postgres'),
+        'PASSWORD': config('DB_PASSWD', default='root'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432')
     }
 }
 

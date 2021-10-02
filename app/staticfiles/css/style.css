@@ -1,0 +1,34 @@
+html, body, h, a, ul, li, p, div, h1, h2, h3, h4, h5, strong, span, figure {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ffffff;
+}
+
+
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #003140;
+}
+
+.base-content {
+    width: 80%;
+    padding: 0px 10%;
+}

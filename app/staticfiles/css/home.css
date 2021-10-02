@@ -1,0 +1,566 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-top: 70px;
+}
+
+/* start welcome section */
+
+.content .welcome {
+    height: 75vh;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    padding-left: 10%;
+}
+
+.content .welcome .content-welcome {
+    flex-basis: 40%;
+    min-width: 400px;
+}
+
+.content .welcome .content-welcome h4 {
+    color: rgb(167, 167, 167);
+    font-size: 1rem;
+}
+
+.content .welcome .content-welcome h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content .welcome .content-welcome h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #7ee1ff;
+    margin-bottom: 10px;
+}
+
+.content .welcome .content-welcome p {
+    width: 120%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 10px;
+
+    font-size: 90%;
+    font-weight: bold;
+    text-align: justify;
+    text-justify: inter-word;
+    
+    color: white;
+    background-color: #003140;
+
+    z-index: 2;
+    position: relative;
+
+    border-radius: 10px;
+}
+
+
+.content .welcome .welcome-buttons {
+    margin-top: 30px;
+}
+
+.content .welcome .welcome-buttons .btn {
+    display: inline-block;
+    line-height: 45px;
+    padding: 0px 20px;
+
+    background-color: #374151;
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bold;
+    font-size: 1rem;
+    color: #dfe1e4;
+}
+
+.content .welcome .welcome-buttons .btn:hover {
+    box-shadow: 0rem 0rem 2rem #7ee1ff7c;
+}
+
+.content .welcome .welcome-buttons .btn.btn-success {
+    border: 2px solid #529cb3;
+    background-color: rgba(255, 255, 255, 0.027);
+}
+
+.content .welcome .welcome-buttons .btn.btn-success:hover {
+    box-shadow: 0rem 0rem 2rem #76dbfa63;
+    border: 1px solid #529cb3;
+    background-color: #76dbfa2a;
+}
+
+.content .welcome .welcome-image {
+    flex-basis: 60%;
+    max-width: 600px;
+    min-width: 500px;
+}
+
+.content .welcome .welcome-image img{
+    margin-top: 20px;
+    min-height: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* end of welcome section */
+
+/* start of projects section */
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    padding-top: 20px;
+}
+
+.projects > h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+}
+
+.projects > p {
+    margin-top: 15px;
+    color: white;
+    font-size: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.projects > p::after {
+    content: '';
+
+    width: 110px;
+    height: 3px;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    background-color: #00b2df;
+}
+
+.projects .projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+    margin-top: 50px;
+    padding: 0 10%;
+}
+
+.projects .projects-container .project {
+    width: 350px;
+    margin: 0 1%;
+    margin-bottom: 5%;
+
+    box-shadow: 0rem 0rem 1rem #131313c7;
+}
+
+.projects .projects-container .project .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .projects-container .project .img img {
+    display: block;
+
+    width: 350px;
+    height: 260px;
+}
+
+.projects .projects-container .project .img img:hover {
+    width: 400px;
+    height: 300px;
+}
+
+.projects .projects-container .project .info {
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.projects .projects-container .project .info a {
+    display: block;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.projects .projects-container .project .info a:hover h4 {
+    color: #7ee1ff;
+}
+
+.projects .projects-container .project .info a h4 {
+    font-size: 1.5rem;
+}
+
+.projects .projects-container .project .info .tecs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+}
+
+.projects .projects-container .project .info .tecs .tec-info {
+    flex-basis: 25%;
+
+    color: white;
+    text-align: center;
+    font-size: .8rem;
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    padding: 2px 4px;
+    margin: 5px;
+
+    cursor: pointer;
+}
+
+.projects .projects-container .project .info .tecs .tec-info:hover {
+    border: 1px solid #7ee1ff;
+    color: #7ee1ff;
+}
+
+.projects .projects-container .project .info p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e3e3e3;
+    padding: 0px 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+/* end of projects section */
+
+/* projects of skills section */
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-left: 20%;
+    padding-right: 20%;
+
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    background-color: #007a99;
+
+    width: 60%;
+}
+
+.skills > h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+}
+
+.skills > p {
+    margin-top: 15px;
+    color: white;
+    font-size: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.skills > p::after {
+    content: '';
+
+    width: 140px;
+    height: 4px;
+    margin-top: 10px;
+
+    border-radius: 10px;
+    background-color: #003140;
+}
+
+.skills .skill-content {
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.skills .skill-content .skill {
+    flex-basis: 16%;
+
+    padding: 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skills .skill-content .skill img {
+    height: 80px;
+}
+
+.skills .skill-content .skill h4 {
+    margin-top: 10px;
+}
+
+/* end of skilss section */
+/* start of about-me section */
+.about-me {
+    background-color: #005d74;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20%;
+    width: 60%;
+}
+
+.about-me .about-me-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.about-me .about-me-img img {
+    height: 550px;
+
+    box-shadow: 0rem 0rem 1rem #f8f8f81e;
+}
+
+.about-me .about-me-info .img-mobile {
+    width: 150px;
+    background-color: white;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    position: relative;
+    top: -70px;
+
+    margin-bottom: -40px;
+
+    border-radius: 50%;
+    box-shadow: 0rem 0rem 1rem rgba(255, 255, 255, 0.247);
+    overflow: hidden;
+}
+
+.about-me .about-me-info .img-mobile img {
+    display: block;
+    width: 70%;
+}
+
+.about-me .about-me-info {
+    background-color: #003140;
+    color: white;
+
+    padding: 20px;
+    height: 470px;
+    width: 560px;
+    min-width: 500px;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0rem 0rem 1rem #f8f8f81e;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+.about-me .about-me-info h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.about-me .about-me-info > span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2.5px;
+}
+
+.about-me .about-me-info .me-info {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.about-me .about-me-info .me-info p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.about-me .about-me-info .me-info ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.about-me .about-me-info .social-media {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.about-me .about-me-info .social-media a, 
+.about-me .about-me-info .social-media button {
+    padding: 10px;
+    padding-top: 0px;
+    border: none;
+    background-color: transparent;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me .about-me-info .social-media a:hover img, 
+.about-me .about-me-info .social-media button:hover img {
+    width: 36px;
+}
+
+/* end of about-me section */
+
+
+@media (max-width: 990px) {
+    .welcome-image {
+        min-width: 400px !important;
+    }
+
+    .about-me {
+        padding-top: 100px;
+    }
+
+    .about-me .about-me-img {
+        display: none;
+    }
+
+    .about-me .about-me-info {
+        height: auto;
+    }
+
+    .about-me .about-me-info .img-mobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 850px) {
+    .welcome {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .welcome-image {
+        display: none;
+    }
+
+    .content-welcome {
+        flex-basis: 100% !important;
+        min-width: 300px !important;
+    }
+
+    .content-welcome .descricao {
+        width: 100% !important;
+        font-size: 100%;
+        text-align: justify;
+    }
+
+    .skills {
+        padding: 5%;
+        width: 90%;
+    }
+
+    .skills .skill {
+        margin: 0 10px;
+    }
+
+    .content-welcome h2 {
+        font-size: 3.5rem !important;
+    }
+    .content-welcome h4 {
+        font-size: 2.5rem !important;
+    }
+    .content-welcome h3 {
+        font-size: 1.8rem !important;
+    }
+
+    .content-welcome p {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media (max-width: 680px) {
+    #header {
+        justify-content: center !important;
+    }
+
+    #header .nav-photo {
+        flex-direction: column;
+        width: 100% !important;
+
+        margin-top: 10px;
+    }
+
+    #header .nav-photo h3 {
+        margin-top: 10px !important;
+    }
+
+    #header .nav {
+        display: none !important;
+    }
+
+    .about-me {
+        padding: 20% 5% !important;
+        width: 90%;
+    }
+
+    .about-me .about-me-info {
+        min-width: 300px;
+    }
+
+    .about-me .about-me-info li {
+        margin-bottom: 10px;
+    }
+}
