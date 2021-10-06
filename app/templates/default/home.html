@@ -11,10 +11,9 @@
         <div class="content-welcome">
             <h4> Olá mundo! </h4>
             <h2> José Pedro </h2>
-            <h3> Backend Developer </h3>
+            <h3> {{ profile.funcao }} </h3>
             <p class="descricao"> 
-                Cearense arretado e com orgulho, desenvolvedor Backend Python (Django),
-                aspirante a FullStack, Pythonista e amante de Machine Learning.
+                {{ profile.descricao_welcome }}
             </p>
             <div class="welcome-buttons">
                 <form method="post" action="mailto:pedroosd28@gmail.com" >
@@ -82,21 +81,17 @@
             </figure>
             <h2> José Pedro </h2>
             <span> 💼 Backend Developer </span>
-            <span> 📍 Crato, Ceará, Brazil </span>
+            <span> 📍 {{ profile.localizacao }} </span>
             <div class="me-info">
                 <p>
-                    Estudante de TI no Instituto Federal do Ceará com conhecimentos em Python 
-                    voltados ao desenvolvimento de WebSites e WebAPIs com 
-                    Django, Flask e FastAPI. <br>
-                    Comunicativo, autodidata e com sede de aprender. Sigo a minha jornada
-                    a procura de me tornar FullStack, focando no Javascript com React e React Native
+                    {{ profile.descricao_about_me }}
                 </p>
                 <br>
                 <strong>Atualmente: </strong>
                 <ul>
-                    <li> 💬 Masterizando Django, Flask e Fast API. </li>
-                    <li> 🌱 Aprendendo React e React Native. </li>
-                    <li> 🍵 As vezes brinco com Java e outras coisas. </li>
+                    {% for activity in activities %}
+                        <li> {{ activity.descricao }} </li>
+                    {% endfor %}
                 </ul>
             </div>
             <ul class="social-media">

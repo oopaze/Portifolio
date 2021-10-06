@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import CharField
 
 
 class Tecnology(models.Model):
@@ -9,6 +10,26 @@ class Tecnology(models.Model):
 
     class Meta:
         verbose_name_plural = u'Tecnologies'
+
+
+class CurrentlyActivity(models.Model):
+    profile_fk = models.ForeignKey("Profile", on_delete=models.CASCADE)
+    descricao = models.CharField("Descrição", max_length=255)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.descricao
+
+
+class Profile(models.Model):
+    descricao_welcome = models.TextField("Descrição Welcome")
+    funcao = models.CharField(max_length=255)
+
+    localizacao = models.CharField(max_length=255)
+    descricao_about_me = models.TextField("Descrição Sobre mim")
+
+    def __str__(self):
+        return f"< Eu ({self.id})>"
 
 
 class Project(models.Model):
