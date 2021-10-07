@@ -4,6 +4,10 @@ html, body, h, a, ul, li, p, div, h1, h2, h3, h4, h5, strong, span, figure {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body { 
     width: 100%;
     height: 100%;
