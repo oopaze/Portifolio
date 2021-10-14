@@ -26,8 +26,9 @@
 
 #header .nav-photo img {
     margin-right: 10px;
-    height: 50px;
-    width: 50px;
+    padding-left: 4px;
+    height: 60px;
+    width: 55px;
 
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.158);
