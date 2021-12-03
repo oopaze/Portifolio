@@ -54,15 +54,34 @@
 #header ul.nav li.nav-item a.nav-link {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 
     height: 30px;
+    margin-top: 10px;
 
     color: rgb(239, 241, 243);
     font-weight: bold;
 }
 
+#header ul.nav li.nav-item a.nav-link::after{
+    content: '';
+    display: block;
+    
+    width: 0;
+    height: 2px;
+    margin-top: 3px;
+
+    transition: width 0.5s ease-in;
+
+    background-color: #52c3e6;
+}
+
+
 #header ul.nav li.nav-item a.nav-link:hover, #header ul.nav li.nav-item a.nav-link.active {
     color: #52c3e6;
-    border-bottom: 1px solid #52c3e6;
 } 
+
+#header ul.nav li.nav-item a.nav-link:hover::after, #header ul.nav li.nav-item a.nav-link.active::after {
+    width: 100%;
+}

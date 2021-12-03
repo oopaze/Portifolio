@@ -23,6 +23,10 @@
         {% endblock %}
     </div>
 
+    <script src="{% static 'js/header.js' %}"></script>
+    <script>
+        window.onload = onload()
+    </script>
     {% block extra_js %}
     {% endblock %}
 </body>
