@@ -1,7 +1,14 @@
 {% load static %}
 
 <a href="#" class="nav-photo">
-    <img src="{% static 'images/eu_desenhado.png' %}" alt="">
+    <img
+        {% if profile.menu_foto %}
+        src="{{ profile.menu_foto.url }}"
+        {% else %}
+        src="{% static 'images/eu_desenhado.png' %}" 
+        {% endif %} 
+        alt=""
+    >
     <h3> José Pedro </h3>
 </a>
 

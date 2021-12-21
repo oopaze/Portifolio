@@ -72,12 +72,20 @@
     <section id="about-me" class="about-me">
         <div class="about-me-img">
             <figure>
+                {% if profile.profile_foto %}
+                <img src="{{ profile.profile_foto.url }}" alt="">
+                {% else %}
                 <img src="{% static 'images/me2.jpg' %}" alt="">
+                {% endif %}
             </figure>
         </div>
         <div class="about-me-info">
             <figure class="img-mobile">
+                {% if profile.profile_foto %}
+                <img src="{{ profile.profile_foto.url }}" alt="">
+                {% else %}
                 <img src="{% static 'images/me2.jpg' %}" alt="">
+                {% endif %}
             </figure>
             <h2> José Pedro </h2>
             <span> 💼 {{ profile.funcao }} </span>

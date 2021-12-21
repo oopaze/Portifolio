@@ -22,6 +22,8 @@ class CurrentlyActivity(models.Model):
 
 
 class Profile(models.Model):
+    profile_foto = models.FileField(upload_to='images', null=True, blank=True)
+    menu_foto = models.FileField(upload_to="images", null=True, blank=True)
     descricao_welcome = models.TextField("Descrição Welcome")
     funcao = models.CharField(max_length=255)
 
